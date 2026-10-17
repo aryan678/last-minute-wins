@@ -1,0 +1,6 @@
+# Optional Google Cloud SDKs. The app runs in demo mode without them.
+google-genai==1.10.0
+google-cloud-bigquery==3.25.0
+google-cloud-storage==2.18.2
+google-cloud-documentai==2.32.0
+google-cloud-discoveryengine==0.13.0

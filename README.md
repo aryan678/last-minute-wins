@@ -1,5 +1,46 @@
 ClaimWise AI
 AI-powered catastrophe alerts and insurance claims intelligence, built with Google Cloud.
+
+## Run the MVP locally (demo mode, no Google Cloud account needed)
+
+Backend (FastAPI, Python 3.10+):
+
+```bash
+cd backend
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/uvicorn app.main:app --port 8000
+```
+
+Frontend (Next.js):
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:3000. Tests and build:
+
+```bash
+cd backend && .venv/bin/python -m pytest -q
+cd frontend && npm run build
+```
+
+Docs: [Architecture](docs/ARCHITECTURE.md) · [API](docs/API.md) · [Google Cloud setup](docs/GOOGLE_CLOUD_SETUP.md) · [Demo script](docs/DEMO_SCRIPT.md)
+
+### What is live and what is demo
+
+| Google Cloud service | Status in this build |
+|---|---|
+| Gemini on Vertex AI | Implemented. Live when `GEMINI_ENABLED=true` and a project is set. Otherwise a labelled template fallback |
+| BigQuery | Exposure SQL written. Analytics computed in Python |
+| Document AI | Not implemented. Uploads are stored and not extracted |
+| Vertex AI Search | Not implemented. Clauses come from the labelled DEMO POLICY DATA set |
+| Cloud Storage | Not implemented. Local demo storage |
+| Cloud Run | Dockerfile ready. Not deployed from this build |
+
+Synthetic data only. Simulated events are not official warnings. ClaimWise never approves, rejects or declares fraud on a claim.
 ClaimWise AI helps insurers connect catastrophe alerts to their insured portfolio, prepare for a surge in claims, and review claim documents against policy wording. It brings catastrophe exposure, claims operations, document checks, and policy evidence into one workflow.
 What it does
 - Catastrophe alerts: Shows the event type, affected area, severity, timestamp, and source. Hackathon scenarios are clearly labelled as simulated.

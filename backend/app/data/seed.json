@@ -1,0 +1,1743 @@
+{
+  "events": [
+    {
+      "event_id": "SIM-CYC-2026-01",
+      "hazard_type": "cyclone",
+      "name": "Cyclone Meera (SIMULATED)",
+      "region": "Coastal Andhra Pradesh (fictional scenario)",
+      "lat": 17.7,
+      "lon": 83.3,
+      "radius_km": 150,
+      "severe_radius_km": 60,
+      "severity": "Severe",
+      "severity_basis": "Scenario input: sustained wind 150 km/h at landfall, 2 flood-prone districts",
+      "status": "active",
+      "detected_at": "2026-10-14T06:30:00+05:30",
+      "expected_window": "2026-10-14 to 2026-10-16",
+      "confidence": "Scenario (not a forecast)",
+      "source_name": "ClaimWise demo scenario generator",
+      "source_url": null,
+      "is_simulated": true,
+      "data_freshness": "Static scenario, generated 2026-10-17",
+      "description": "Simulated cyclone approaching a fictional coast. Use for demonstration only; not an official warning."
+    },
+    {
+      "event_id": "SIM-FLD-2026-02",
+      "hazard_type": "flood",
+      "name": "Riverine Flood Watch (SIMULATED)",
+      "region": "Lake and creek basin (fictional)",
+      "lat": 17.92,
+      "lon": 83.1,
+      "radius_km": 40,
+      "severe_radius_km": 15,
+      "severity": "Moderate",
+      "severity_basis": "Scenario input: river gauge 1.5 m above warning level",
+      "status": "monitoring",
+      "detected_at": "2026-10-15T12:00:00+05:30",
+      "expected_window": "2026-10-16 to 2026-10-19",
+      "confidence": "Scenario (not a forecast)",
+      "source_name": "ClaimWise demo scenario generator",
+      "source_url": null,
+      "is_simulated": true,
+      "data_freshness": "Static scenario, generated 2026-10-17",
+      "description": "Simulated flood watch for a second event to test filters. Not an official warning."
+    },
+    {
+      "event_id": "SIM-FIR-2026-03",
+      "hazard_type": "fire",
+      "name": "Industrial Fire Incident (SIMULATED)",
+      "region": "Industrial Estate (fictional)",
+      "lat": 17.55,
+      "lon": 83.45,
+      "radius_km": 5,
+      "severe_radius_km": 2,
+      "severity": "High",
+      "severity_basis": "Scenario input: single-site fire, adjacent units at risk",
+      "status": "closed",
+      "detected_at": "2026-10-08T21:10:00+05:30",
+      "expected_window": "2026-10-08",
+      "confidence": "Scenario",
+      "source_name": "ClaimWise demo scenario generator",
+      "source_url": null,
+      "is_simulated": true,
+      "data_freshness": "Static scenario, generated 2026-10-17",
+      "description": "Simulated localised fire. Used for fire claim examples."
+    },
+    {
+      "event_id": "SCN-001",
+      "hazard_type": "cyclone",
+      "name": "Demo Coastal Cyclone (SIMULATED)",
+      "region": "Demo Coastal District",
+      "lat": 19.127,
+      "lon": 72.88,
+      "radius_km": 35,
+      "severe_radius_km": 15,
+      "severity": "High",
+      "severity_basis": "Scenario input: illustrative only",
+      "status": "active",
+      "detected_at": "2026-10-18T06:00:00+05:30",
+      "expected_window": "From 2026-10-18 06:00 IST",
+      "confidence": "Illustrative only",
+      "source_name": "Synthetic hackathon scenario",
+      "source_url": null,
+      "is_simulated": true,
+      "data_freshness": "Static scenario file",
+      "description": "Synthetic demo scenario from the scenario file. Not an official warning. Severe radius is an assumption."
+    }
+  ],
+  "adjusters": [
+    {
+      "adjuster_id": "ADJ-01",
+      "name": "Sana Qureshi",
+      "capacity_per_day": 2
+    },
+    {
+      "adjuster_id": "ADJ-02",
+      "name": "Rajiv Thomas",
+      "capacity_per_day": 2
+    },
+    {
+      "adjuster_id": "ADJ-03",
+      "name": "Leela Varma",
+      "capacity_per_day": 3
+    },
+    {
+      "adjuster_id": "ADJ-04",
+      "name": "Imran Sheikh",
+      "capacity_per_day": 2
+    },
+    {
+      "adjuster_id": "ADJ-05",
+      "name": "Nandini Roy",
+      "capacity_per_day": 2
+    }
+  ],
+  "policies": [
+    {
+      "policy_id": "POL-A101",
+      "policyholder": "Asha Rao",
+      "policy_type": "Commercial Property",
+      "insured_item": "Demo Zone A property",
+      "coverage_limit": 5000000,
+      "deductible": 25000,
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-12-31",
+      "covered_perils": [
+        "cyclone",
+        "windstorm",
+        "fire"
+      ],
+      "exclusions": [
+        "gradual wear and tear",
+        "intentional damage"
+      ],
+      "endorsements": [
+        "Cyclone deductible endorsement CE-2 (applies to windstorm claims)"
+      ],
+      "location_ids": [
+        "LOC-A101-1"
+      ],
+      "address_label": "Demo Zone A property"
+    },
+    {
+      "policy_id": "POL-A102",
+      "policyholder": "Vikram Menon",
+      "policy_type": "Comprehensive Motor",
+      "insured_item": "Demo Zone B vehicle",
+      "coverage_limit": 900000,
+      "deductible": 10000,
+      "effective_from": "2026-02-01",
+      "effective_to": "2027-01-31",
+      "covered_perils": [
+        "accidental damage",
+        "flood damage subject to wording"
+      ],
+      "exclusions": [
+        "mechanical breakdown without insured event",
+        "driving without required licence where applicable"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A102-1"
+      ],
+      "address_label": "Demo Zone B vehicle"
+    },
+    {
+      "policy_id": "POL-A103",
+      "policyholder": "Priya Nair",
+      "policy_type": "Commercial Property",
+      "insured_item": "Demo Zone C property",
+      "coverage_limit": 3000000,
+      "deductible": 20000,
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-12-31",
+      "covered_perils": [
+        "fire",
+        "storm damage subject to wording"
+      ],
+      "exclusions": [
+        "theft without evidence of forced entry if excluded by wording",
+        "wear and tear"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A103-1"
+      ],
+      "address_label": "Demo Zone C property"
+    },
+    {
+      "policy_id": "POL-A104",
+      "policyholder": "Rahul Verma",
+      "policy_type": "Motor Comprehensive",
+      "insured_item": "Sedan MH-fictional",
+      "coverage_limit": 800000,
+      "deductible": 5000,
+      "effective_from": "2026-01-15",
+      "effective_to": "2027-01-14",
+      "covered_perils": [
+        "flood",
+        "fire",
+        "theft"
+      ],
+      "exclusions": [
+        "Driving under influence"
+      ],
+      "endorsements": [
+        "Flood cover add-on FL-1"
+      ],
+      "location_ids": [
+        "LOC-A104-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A105",
+      "policyholder": "Sneha Iyer",
+      "policy_type": "Business Interruption",
+      "insured_item": "Seafood Processing Unit",
+      "coverage_limit": 2500000,
+      "deductible": 50000,
+      "effective_from": "2026-04-01",
+      "effective_to": "2027-03-31",
+      "covered_perils": [
+        "cyclone",
+        "fire"
+      ],
+      "exclusions": [
+        "Loss of market",
+        "Delay not caused by insured peril"
+      ],
+      "endorsements": [
+        "Extended indemnity period 90 days"
+      ],
+      "location_ids": [
+        "LOC-A105-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A106",
+      "policyholder": "Arjun Das",
+      "policy_type": "Commercial Property",
+      "insured_item": "Cold Storage Unit",
+      "coverage_limit": 3500000,
+      "deductible": 25000,
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-12-31",
+      "covered_perils": [
+        "cyclone",
+        "flood",
+        "fire"
+      ],
+      "exclusions": [
+        "Spoilage without breakdown"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A106-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A107",
+      "policyholder": "Meera Joshi",
+      "policy_type": "Homeowners",
+      "insured_item": "Family Home, Lake View",
+      "coverage_limit": 1800000,
+      "deductible": 10000,
+      "effective_from": "2026-05-01",
+      "effective_to": "2027-04-30",
+      "covered_perils": [
+        "fire",
+        "theft"
+      ],
+      "exclusions": [
+        "Cyclone not covered under this product"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A107-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A108",
+      "policyholder": "Karan Patel",
+      "policy_type": "Motor Comprehensive",
+      "insured_item": "Hatchback KA-fictional",
+      "coverage_limit": 650000,
+      "deductible": 5000,
+      "effective_from": "2026-02-10",
+      "effective_to": "2027-02-09",
+      "covered_perils": [
+        "cyclone",
+        "flood",
+        "theft"
+      ],
+      "exclusions": [
+        "Racing use"
+      ],
+      "endorsements": [
+        "Windscreen cover"
+      ],
+      "location_ids": [
+        "LOC-A108-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A109",
+      "policyholder": "Neha Kulkarni",
+      "policy_type": "Commercial Property",
+      "insured_item": "Pharmacy Chain Outlet 3",
+      "coverage_limit": 1200000,
+      "deductible": 20000,
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-12-31",
+      "covered_perils": [
+        "fire",
+        "theft",
+        "cyclone"
+      ],
+      "exclusions": [
+        "Stock in transit"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A109-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A110",
+      "policyholder": "Dev Malhotra",
+      "policy_type": "Commercial Property",
+      "insured_item": "Hotel Wing, Harbour Area",
+      "coverage_limit": 6000000,
+      "deductible": 50000,
+      "effective_from": "2026-06-01",
+      "effective_to": "2027-05-31",
+      "covered_perils": [
+        "cyclone",
+        "flood",
+        "fire"
+      ],
+      "exclusions": [
+        "Pollution"
+      ],
+      "endorsements": [
+        "Named storm sub-limit 40 lakh"
+      ],
+      "location_ids": [
+        "LOC-A110-1",
+        "LOC-A110-2"
+      ]
+    },
+    {
+      "policy_id": "POL-A111",
+      "policyholder": "Ritu Sen",
+      "policy_type": "Homeowners",
+      "insured_item": "Townhouse, Port Quarter",
+      "coverage_limit": 2200000,
+      "deductible": 10000,
+      "effective_from": "2026-03-15",
+      "effective_to": "2027-03-14",
+      "covered_perils": [
+        "cyclone",
+        "flood",
+        "fire"
+      ],
+      "exclusions": [
+        "Unauthorised alterations"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A111-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A112",
+      "policyholder": "Sahil Khan",
+      "policy_type": "Commercial Property",
+      "insured_item": "Machine Shop, Industrial Estate",
+      "coverage_limit": 3000000,
+      "deductible": 25000,
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-12-31",
+      "covered_perils": [
+        "fire",
+        "flood",
+        "theft"
+      ],
+      "exclusions": [
+        "Gradual deterioration"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A112-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A113",
+      "policyholder": "Anita Bose",
+      "policy_type": "Motor Comprehensive",
+      "insured_item": "SUV TN-fictional",
+      "coverage_limit": 1100000,
+      "deductible": 7500,
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-06-30",
+      "covered_perils": [
+        "cyclone",
+        "flood",
+        "theft",
+        "fire"
+      ],
+      "exclusions": [
+        "Mechanical breakdown"
+      ],
+      "endorsements": [
+        "Flood cover add-on FL-1"
+      ],
+      "location_ids": [
+        "LOC-A113-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A114",
+      "policyholder": "Harish Pillai",
+      "policy_type": "Business Interruption",
+      "insured_item": "Packaging Factory",
+      "coverage_limit": 2000000,
+      "deductible": 40000,
+      "effective_from": "2026-02-01",
+      "effective_to": "2027-01-31",
+      "covered_perils": [
+        "fire",
+        "cyclone"
+      ],
+      "exclusions": [
+        "Contractual penalties"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A114-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A115",
+      "policyholder": "Lakshmi Rao",
+      "policy_type": "Homeowners",
+      "insured_item": "Coastal Cottage Row",
+      "coverage_limit": 1500000,
+      "deductible": 10000,
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-12-31",
+      "covered_perils": [
+        "cyclone",
+        "flood"
+      ],
+      "exclusions": [
+        "Vacant property over 60 days"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A115-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A116",
+      "policyholder": "Tarun Mehta",
+      "policy_type": "Commercial Property",
+      "insured_item": "Cafe and Bakery, Seaside",
+      "coverage_limit": 500000,
+      "deductible": 5000,
+      "effective_from": "2026-08-01",
+      "effective_to": "2027-07-31",
+      "covered_perils": [
+        "fire",
+        "theft",
+        "cyclone"
+      ],
+      "exclusions": [
+        "Cash theft over limit"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A116-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A117",
+      "policyholder": "Divya Shah",
+      "policy_type": "Commercial Property",
+      "insured_item": "Cement Depot, Highway 16",
+      "coverage_limit": 4500000,
+      "deductible": 30000,
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-12-31",
+      "covered_perils": [
+        "cyclone",
+        "fire",
+        "flood"
+      ],
+      "exclusions": [
+        "Wear and tear"
+      ],
+      "endorsements": [
+        "Cyclone deductible endorsement CE-2"
+      ],
+      "location_ids": [
+        "LOC-A117-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A118",
+      "policyholder": "Rohan Sethi",
+      "policy_type": "Homeowners",
+      "insured_item": "Bungalow, Creek Side",
+      "coverage_limit": 2700000,
+      "deductible": 15000,
+      "effective_from": "2026-04-10",
+      "effective_to": "2027-04-09",
+      "covered_perils": [
+        "flood",
+        "fire"
+      ],
+      "exclusions": [
+        "Cyclone not covered under this product"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A118-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A119",
+      "policyholder": "Kavya Reddy",
+      "policy_type": "Motor Comprehensive",
+      "insured_item": "Commercial Van, Logistics",
+      "coverage_limit": 900000,
+      "deductible": 7500,
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-12-31",
+      "covered_perils": [
+        "cyclone",
+        "flood",
+        "theft"
+      ],
+      "exclusions": [
+        "Commercial use not declared"
+      ],
+      "endorsements": [],
+      "location_ids": [
+        "LOC-A119-1"
+      ]
+    },
+    {
+      "policy_id": "POL-A120",
+      "policyholder": "Manoj Gill",
+      "policy_type": "Commercial Property",
+      "insured_item": "Data Centre Annex",
+      "coverage_limit": 5000000,
+      "deductible": 50000,
+      "effective_from": "2026-01-01",
+      "effective_to": "2027-12-31",
+      "covered_perils": [
+        "fire",
+        "flood",
+        "cyclone"
+      ],
+      "exclusions": [
+        "Cyber events"
+      ],
+      "endorsements": [
+        "Named storm sub-limit 25 lakh"
+      ],
+      "location_ids": [
+        "LOC-A120-1"
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "location_id": "LOC-A101-1",
+      "policy_id": "POL-A101",
+      "label": "Demo Zone A property",
+      "lat": 19.1,
+      "lon": 72.85,
+      "tiv": 5000000,
+      "distance_km": 0
+    },
+    {
+      "location_id": "LOC-A102-1",
+      "policy_id": "POL-A102",
+      "label": "Demo Zone B vehicle",
+      "lat": 19.12,
+      "lon": 72.88,
+      "tiv": 900000,
+      "distance_km": 0
+    },
+    {
+      "location_id": "LOC-A103-1",
+      "policy_id": "POL-A103",
+      "label": "Demo Zone C property",
+      "lat": 19.16,
+      "lon": 72.91,
+      "tiv": 3000000,
+      "distance_km": 0
+    },
+    {
+      "location_id": "LOC-A104-1",
+      "policy_id": "POL-A104",
+      "label": "Parking Garage",
+      "lat": 17.79009,
+      "lon": 82.7326,
+      "tiv": 800000,
+      "distance_km": 60.8
+    },
+    {
+      "location_id": "LOC-A105-1",
+      "policy_id": "POL-A105",
+      "label": "Processing Plant",
+      "lat": 17.57387,
+      "lon": 83.22435,
+      "tiv": 2500000,
+      "distance_km": 16.1
+    },
+    {
+      "location_id": "LOC-A106-1",
+      "policy_id": "POL-A106",
+      "label": "Cold Storage 2",
+      "lat": 18.24054,
+      "lon": 82.40162,
+      "tiv": 3500000,
+      "distance_km": 112.4
+    },
+    {
+      "location_id": "LOC-A107-1",
+      "policy_id": "POL-A107",
+      "label": "Lake View Home",
+      "lat": 19.14144,
+      "lon": 81.8815,
+      "tiv": 1800000,
+      "distance_km": 219.3
+    },
+    {
+      "location_id": "LOC-A108-1",
+      "policy_id": "POL-A108",
+      "label": "Residential Car Park",
+      "lat": 17.98829,
+      "lon": 83.12978,
+      "tiv": 650000,
+      "distance_km": 36.7
+    },
+    {
+      "location_id": "LOC-A109-1",
+      "policy_id": "POL-A109",
+      "label": "Pharmacy Outlet 3",
+      "lat": 17.64595,
+      "lon": 83.11087,
+      "tiv": 1200000,
+      "distance_km": 20.9
+    },
+    {
+      "location_id": "LOC-A110-1",
+      "policy_id": "POL-A110",
+      "label": "Hotel Wing A",
+      "lat": 17.5018,
+      "lon": 83.16761,
+      "tiv": 3500000,
+      "distance_km": 26.1
+    },
+    {
+      "location_id": "LOC-A110-2",
+      "policy_id": "POL-A110",
+      "label": "Hotel Wing B",
+      "lat": 17.38468,
+      "lon": 83.25272,
+      "tiv": 2500000,
+      "distance_km": 35.4
+    },
+    {
+      "location_id": "LOC-A111-1",
+      "policy_id": "POL-A111",
+      "label": "Townhouse 7",
+      "lat": 17.84414,
+      "lon": 83.06358,
+      "tiv": 2200000,
+      "distance_km": 29.7
+    },
+    {
+      "location_id": "LOC-A112-1",
+      "policy_id": "POL-A112",
+      "label": "Machine Shop 4",
+      "lat": 17.06937,
+      "lon": 82.96902,
+      "tiv": 3000000,
+      "distance_km": 78.3
+    },
+    {
+      "location_id": "LOC-A113-1",
+      "policy_id": "POL-A113",
+      "label": "Showroom Yard",
+      "lat": 17.95225,
+      "lon": 82.87445,
+      "tiv": 1100000,
+      "distance_km": 53.0
+    },
+    {
+      "location_id": "LOC-A114-1",
+      "policy_id": "POL-A114",
+      "label": "Packaging Factory",
+      "lat": 17.26757,
+      "lon": 83.24326,
+      "tiv": 2000000,
+      "distance_km": 48.4
+    },
+    {
+      "location_id": "LOC-A115-1",
+      "policy_id": "POL-A115",
+      "label": "Cottage 3",
+      "lat": 17.79009,
+      "lon": 83.20543,
+      "tiv": 1500000,
+      "distance_km": 14.1
+    },
+    {
+      "location_id": "LOC-A116-1",
+      "policy_id": "POL-A116",
+      "label": "Seaside Bakery",
+      "lat": 17.60991,
+      "lon": 83.14869,
+      "tiv": 500000,
+      "distance_km": 18.9
+    },
+    {
+      "location_id": "LOC-A117-1",
+      "policy_id": "POL-A117",
+      "label": "Cement Depot",
+      "lat": 16.88919,
+      "lon": 82.35433,
+      "tiv": 4500000,
+      "distance_km": 134.5
+    },
+    {
+      "location_id": "LOC-A118-1",
+      "policy_id": "POL-A118",
+      "label": "Creek Bungalow",
+      "lat": 17.65495,
+      "lon": 82.77988,
+      "tiv": 2700000,
+      "distance_km": 55.2
+    },
+    {
+      "location_id": "LOC-A119-1",
+      "policy_id": "POL-A119",
+      "label": "Logistics Yard",
+      "lat": 17.33964,
+      "lon": 83.0163,
+      "tiv": 900000,
+      "distance_km": 50.0
+    },
+    {
+      "location_id": "LOC-A120-1",
+      "policy_id": "POL-A120",
+      "label": "Data Centre Annex",
+      "lat": 17.73604,
+      "lon": 83.03521,
+      "tiv": 5000000,
+      "distance_km": 28.3
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CLM-2001",
+      "policy_id": "POL-A101",
+      "policyholder": "Asha Rao",
+      "claim_type": "property_damage",
+      "event_id": "SCN-001",
+      "loss_date": "2026-10-18",
+      "reported_date": "2026-10-18",
+      "loss_cause": "cyclone",
+      "reported_amount": 480000,
+      "status": "FNOL received",
+      "adjuster_id": "ADJ-01",
+      "location_label": "Demo Zone A property",
+      "priority": "high",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Demo Zone A property",
+      "notes": [],
+      "reported_cause_label": "cyclone_wind_damage",
+      "source_note": "Fictional sample claim from scenario file"
+    },
+    {
+      "claim_id": "CLM-2002",
+      "policy_id": "POL-A102",
+      "policyholder": "Vikram Menon",
+      "claim_type": "motor",
+      "event_id": "SCN-001",
+      "loss_date": "2026-10-18",
+      "reported_date": "2026-10-18",
+      "loss_cause": "flood",
+      "reported_amount": 175000,
+      "status": "Under review",
+      "adjuster_id": "ADJ-02",
+      "location_label": "Demo Zone B vehicle",
+      "priority": "medium",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Demo Zone B vehicle",
+      "notes": [],
+      "reported_cause_label": "flood_damage",
+      "source_note": "Fictional sample claim from scenario file"
+    },
+    {
+      "claim_id": "CLM-2003",
+      "policy_id": "POL-A103",
+      "policyholder": "Priya Nair",
+      "claim_type": "fire",
+      "event_id": "SCN-001",
+      "loss_date": "2026-10-18",
+      "reported_date": "2026-10-18",
+      "loss_cause": "fire",
+      "reported_amount": 320000,
+      "status": "FNOL received",
+      "adjuster_id": "ADJ-03",
+      "location_label": "Demo Zone C property",
+      "priority": "high",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Demo Zone C property",
+      "notes": [],
+      "reported_cause_label": "electrical_fire_after_storm",
+      "source_note": "Fictional sample claim from scenario file"
+    },
+    {
+      "claim_id": "CLM-2004",
+      "policy_id": "POL-A102",
+      "policyholder": "Vikram Menon",
+      "claim_type": "property_damage",
+      "event_id": "SIM-CYC-2026-01",
+      "loss_date": "2026-10-14",
+      "reported_date": "2026-10-15",
+      "loss_cause": "cyclone",
+      "reported_amount": 260000,
+      "status": "Documents received",
+      "adjuster_id": "ADJ-01",
+      "location_label": "Villa 14",
+      "priority": "medium",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Villa 14",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2005",
+      "policy_id": "POL-A105",
+      "policyholder": "Sneha Iyer",
+      "claim_type": "business_interruption",
+      "event_id": "SIM-CYC-2026-01",
+      "loss_date": "2026-10-14",
+      "reported_date": "2026-10-16",
+      "loss_cause": "cyclone",
+      "reported_amount": 1200000,
+      "status": "Under review",
+      "adjuster_id": "ADJ-04",
+      "location_label": "Processing Plant",
+      "priority": "high",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Processing Plant",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2006",
+      "policy_id": "POL-A106",
+      "policyholder": "Arjun Das",
+      "claim_type": "property_damage",
+      "event_id": "SIM-CYC-2026-01",
+      "loss_date": "2026-10-14",
+      "reported_date": "2026-10-16",
+      "loss_cause": "flood",
+      "reported_amount": 950000,
+      "status": "Escalated for human review",
+      "adjuster_id": "ADJ-03",
+      "location_label": "Cold Storage 2",
+      "priority": "high",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Cold Storage 2",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2007",
+      "policy_id": "POL-A108",
+      "policyholder": "Karan Patel",
+      "claim_type": "motor",
+      "event_id": "SIM-CYC-2026-01",
+      "loss_date": "2026-10-14",
+      "reported_date": "2026-10-15",
+      "loss_cause": "cyclone",
+      "reported_amount": 110000,
+      "status": "FNOL received",
+      "adjuster_id": "ADJ-05",
+      "location_label": "Residential Car Park",
+      "priority": "low",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Residential Car Park",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2008",
+      "policy_id": "POL-A110",
+      "policyholder": "Dev Malhotra",
+      "claim_type": "property_damage",
+      "event_id": "SIM-CYC-2026-01",
+      "loss_date": "2026-10-14",
+      "reported_date": "2026-10-16",
+      "loss_cause": "cyclone",
+      "reported_amount": 1850000,
+      "status": "Ready for adjuster decision",
+      "adjuster_id": "ADJ-02",
+      "location_label": "Hotel Wing A",
+      "priority": "high",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Hotel Wing A",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2009",
+      "policy_id": "POL-A109",
+      "policyholder": "Neha Kulkarni",
+      "claim_type": "theft",
+      "event_id": null,
+      "loss_date": "2027-01-20",
+      "reported_date": "2027-01-25",
+      "loss_cause": "theft",
+      "reported_amount": 60000,
+      "status": "Under review",
+      "adjuster_id": "ADJ-05",
+      "location_label": "Pharmacy Outlet 3",
+      "priority": "low",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Pharmacy Outlet 3",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2010",
+      "policy_id": "POL-A111",
+      "policyholder": "Ritu Sen",
+      "claim_type": "property_damage",
+      "event_id": "SIM-CYC-2026-01",
+      "loss_date": "2026-10-14",
+      "reported_date": "2026-10-15",
+      "loss_cause": "cyclone",
+      "reported_amount": 410000,
+      "status": "Awaiting documents",
+      "adjuster_id": "ADJ-04",
+      "location_label": "Townhouse 7",
+      "priority": "medium",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Townhouse 7",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2011",
+      "policy_id": "POL-A115",
+      "policyholder": "Lakshmi Rao",
+      "claim_type": "property_damage",
+      "event_id": "SIM-CYC-2026-01",
+      "loss_date": "2026-10-14",
+      "reported_date": "2026-10-18",
+      "loss_cause": "cyclone",
+      "reported_amount": 150000,
+      "status": "FNOL received",
+      "adjuster_id": "ADJ-01",
+      "location_label": "Cottage 3",
+      "priority": "low",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Cottage 3",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2012",
+      "policy_id": "POL-A114",
+      "policyholder": "Harish Pillai",
+      "claim_type": "business_interruption",
+      "event_id": "SIM-FIR-2026-03",
+      "loss_date": "2026-10-08",
+      "reported_date": "2026-10-10",
+      "loss_cause": "fire",
+      "reported_amount": 780000,
+      "status": "Documents received",
+      "adjuster_id": "ADJ-03",
+      "location_label": "Packaging Factory",
+      "priority": "medium",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Packaging Factory",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2013",
+      "policy_id": "POL-A113",
+      "policyholder": "Anita Bose",
+      "claim_type": "motor",
+      "event_id": "SIM-CYC-2026-01",
+      "loss_date": "2026-10-14",
+      "reported_date": "2026-10-15",
+      "loss_cause": "flood",
+      "reported_amount": 240000,
+      "status": "Closed",
+      "adjuster_id": "ADJ-05",
+      "location_label": "Showroom Yard",
+      "priority": "low",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Showroom Yard",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2014",
+      "policy_id": "POL-A116",
+      "policyholder": "Tarun Mehta",
+      "claim_type": "theft",
+      "event_id": null,
+      "loss_date": "2026-10-01",
+      "reported_date": "2026-10-03",
+      "loss_cause": "theft",
+      "reported_amount": 42000,
+      "status": "Additional evidence required",
+      "adjuster_id": "ADJ-02",
+      "location_label": "Seaside Bakery",
+      "priority": "low",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Seaside Bakery",
+      "notes": []
+    },
+    {
+      "claim_id": "CLM-2015",
+      "policy_id": "POL-A120",
+      "policyholder": "Manoj Gill",
+      "claim_type": "other",
+      "event_id": "SIM-FLD-2026-02",
+      "loss_date": "2026-10-15",
+      "reported_date": "2026-10-16",
+      "loss_cause": "flood",
+      "reported_amount": 2100000,
+      "status": "Under review",
+      "adjuster_id": "ADJ-04",
+      "location_label": "Data Centre Annex",
+      "priority": "high",
+      "last_updated": "2026-10-17T09:00:00+05:30",
+      "incident_location": "Data Centre Annex",
+      "notes": []
+    }
+  ],
+  "documents": [
+    {
+      "document_id": "DOC-006",
+      "claim_id": "CLM-2004",
+      "file_name": "claim_form_2004.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-15T12:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Neha Kulkarni",
+        "policy_number": "POL-A102",
+        "incident_date": "2026-10-14",
+        "claimed_amount": 260000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-007",
+      "claim_id": "CLM-2004",
+      "file_name": "invoice_2004.pdf",
+      "document_type": "invoice",
+      "uploaded_at": "2026-10-16T16:20:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "issuer": "Shore Roofing Co (fictional)",
+        "document_date": "2026-10-16",
+        "reference": "INV-0042",
+        "currency": "INR",
+        "subtotal": 240000,
+        "tax": 12000,
+        "total": 252000,
+        "line_items": [
+          {
+            "description": "Roof repair",
+            "amount": 240000
+          }
+        ]
+      },
+      "extraction_confidence": 0.88,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-008",
+      "claim_id": "CLM-2005",
+      "file_name": "claim_form_2005.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-16T09:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Karan Patel",
+        "policy_number": "POL-A105",
+        "incident_date": "2026-10-14",
+        "claimed_amount": 1200000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-009",
+      "claim_id": "CLM-2005",
+      "file_name": "financial_statement_2005.pdf",
+      "document_type": "other",
+      "uploaded_at": "2026-10-17T07:50:00+05:30",
+      "processing_status": "pending",
+      "extraction_source": null,
+      "extracted_fields": {},
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-010",
+      "claim_id": "CLM-2006",
+      "file_name": "claim_form_2006.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-16T13:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Dev Malhotra",
+        "policy_number": "POL-A106",
+        "incident_date": "2026-10-16",
+        "claimed_amount": 950000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-011",
+      "claim_id": "CLM-2006",
+      "file_name": "cold_chain_log_2006.pdf",
+      "document_type": "other",
+      "uploaded_at": "2026-10-17T06:00:00+05:30",
+      "processing_status": "pending",
+      "extraction_source": null,
+      "extracted_fields": {},
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-012",
+      "claim_id": "CLM-2008",
+      "file_name": "claim_form_2008.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-16T18:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Anita Bose",
+        "policy_number": "POL-A110",
+        "incident_date": "2026-10-14",
+        "claimed_amount": 1850000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-013",
+      "claim_id": "CLM-2008",
+      "file_name": "repair_estimate_2008.pdf",
+      "document_type": "repair_estimate",
+      "uploaded_at": "2026-10-17T10:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "issuer": "Harbour Hospitality Repairs (fictional)",
+        "document_date": "2026-10-17",
+        "reference": "EST-9002",
+        "currency": "INR",
+        "subtotal": 1790000,
+        "tax": 0,
+        "total": 1790000,
+        "line_items": [
+          {
+            "description": "Hotel Wing A structural repair",
+            "amount": 1790000
+          }
+        ]
+      },
+      "extraction_confidence": 0.84,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-014",
+      "claim_id": "CLM-2013",
+      "file_name": "claim_form_2013.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-15T10:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Sahil Khan",
+        "policy_number": "POL-A113",
+        "incident_date": "2026-10-14",
+        "claimed_amount": 240000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-015",
+      "claim_id": "CLM-2013",
+      "file_name": "repair_estimate_2013.pdf",
+      "document_type": "repair_estimate",
+      "uploaded_at": "2026-10-16T12:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "issuer": "City Auto Garage (fictional)",
+        "document_date": "2026-10-16",
+        "reference": "GAR-554",
+        "currency": "INR",
+        "subtotal": 232000,
+        "tax": 11600,
+        "total": 243600,
+        "line_items": [
+          {
+            "description": "Body and engine bay repair",
+            "amount": 232000
+          }
+        ]
+      },
+      "extraction_confidence": 0.9,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-016",
+      "claim_id": "CLM-2010",
+      "file_name": "claim_form_2010.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-16T14:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Ritu Sen",
+        "policy_number": "POL-A111",
+        "incident_date": "2026-10-14",
+        "claimed_amount": 410000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-017",
+      "claim_id": "CLM-2012",
+      "file_name": "claim_form_2012.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-11T09:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Harish Pillai",
+        "policy_number": "POL-A114",
+        "incident_date": "2026-10-08",
+        "claimed_amount": 780000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-018",
+      "claim_id": "CLM-2012",
+      "file_name": "loss_of_profit_worksheet_2012.pdf",
+      "document_type": "other",
+      "uploaded_at": "2026-10-12T09:00:00+05:30",
+      "processing_status": "extraction_failed",
+      "extraction_source": null,
+      "extracted_fields": {},
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-019",
+      "claim_id": "CLM-2015",
+      "file_name": "claim_form_2015.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-16T19:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Divya Shah",
+        "policy_number": "POL-A120",
+        "incident_date": "2026-10-15",
+        "claimed_amount": 2100000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-020",
+      "claim_id": "CLM-2015",
+      "file_name": "repair_estimate_2015.pdf",
+      "document_type": "repair_estimate",
+      "uploaded_at": "2026-10-17T11:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "issuer": "Data Infra Services (fictional)",
+        "document_date": "2026-10-17",
+        "reference": "EST-3310",
+        "currency": "INR",
+        "subtotal": 1750000,
+        "tax": 0,
+        "total": 1750000,
+        "line_items": [
+          {
+            "description": "Server room flood damage",
+            "amount": 1750000
+          }
+        ]
+      },
+      "extraction_confidence": 0.79,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-021",
+      "claim_id": "CLM-2014",
+      "file_name": "claim_form_2014.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-03T10:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Rohan Sethi",
+        "policy_number": "POL-A116",
+        "incident_date": "2026-10-01",
+        "claimed_amount": 42000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-022",
+      "claim_id": "CLM-2009",
+      "file_name": "claim_form_2009.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2027-01-25T10:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "claimant_name": "Tarun Mehta",
+        "policy_number": "POL-A109",
+        "incident_date": "2027-01-20",
+        "claimed_amount": 60000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-023",
+      "claim_id": "CLM-2007",
+      "file_name": "claim_form_2007.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-15T08:00:00+05:30",
+      "processing_status": "pending",
+      "extraction_source": null,
+      "extracted_fields": {},
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-024",
+      "claim_id": "CLM-2011",
+      "file_name": "claim_form_2011.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-18T09:00:00+05:30",
+      "processing_status": "pending",
+      "extraction_source": null,
+      "extracted_fields": {},
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-027",
+      "claim_id": "CLM-2014",
+      "file_name": "proof_of_payment_2014.pdf",
+      "document_type": "proof_of_payment",
+      "uploaded_at": "2026-10-03T11:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "issuer": "Seaside Bakery Supplies (fictional)",
+        "document_date": "2026-09-28",
+        "reference": "RCPT-17",
+        "currency": "INR",
+        "subtotal": 40000,
+        "tax": 2000,
+        "total": 42000,
+        "line_items": [
+          {
+            "description": "Replacement fixtures",
+            "amount": 40000
+          }
+        ]
+      },
+      "extraction_confidence": 0.95,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-029",
+      "claim_id": "CLM-2005",
+      "file_name": "income_statement_2005.pdf",
+      "document_type": "other",
+      "uploaded_at": "2026-10-17T07:55:00+05:30",
+      "processing_status": "extraction_failed",
+      "extraction_source": null,
+      "extracted_fields": {},
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-030",
+      "claim_id": "CLM-2010",
+      "file_name": "repair_estimate_2010.pdf",
+      "document_type": "repair_estimate",
+      "uploaded_at": "2026-10-17T12:00:00+05:30",
+      "processing_status": "needs_review",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "issuer": "Townhouse Repairs (fictional)",
+        "document_date": "2026-10-17",
+        "reference": "EST-1212",
+        "currency": "INR",
+        "subtotal": 380000,
+        "tax": 0,
+        "total": null,
+        "line_items": [
+          {
+            "description": "Roof and balcony repair",
+            "amount": 380000
+          }
+        ]
+      },
+      "extraction_confidence": 0.55,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-001",
+      "claim_id": "CLM-2001",
+      "file_name": "repair_estimate_2001.pdf",
+      "document_type": "repair_estimate",
+      "uploaded_at": "2026-10-18T09:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "reference": "EST-2001",
+        "document_date": "2026-10-18",
+        "currency": "INR",
+        "total": 480000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-002",
+      "claim_id": "CLM-2002",
+      "file_name": "garage_estimate_2002.pdf",
+      "document_type": "repair_estimate",
+      "uploaded_at": "2026-10-18T09:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "reference": "GAR-2002",
+        "document_date": "2026-10-18",
+        "currency": "INR",
+        "total": 175000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-003",
+      "claim_id": "CLM-2003",
+      "file_name": "repair_estimate_2003.pdf",
+      "document_type": "repair_estimate",
+      "uploaded_at": "2026-10-18T09:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_seed",
+      "extracted_fields": {
+        "document_date": "2026-10-18",
+        "currency": "INR",
+        "total": null
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-004",
+      "claim_id": "CLM-2003",
+      "file_name": "fire_report_2003.pdf",
+      "document_type": "fire_report",
+      "uploaded_at": "2026-10-18T09:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": null,
+      "extracted_fields": {},
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-005",
+      "claim_id": "CLM-2001",
+      "file_name": "photos_2001.jpg",
+      "document_type": "photos",
+      "uploaded_at": "2026-10-18T09:00:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": null,
+      "extracted_fields": {},
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_seed"
+    }
+  ],
+  "clauses": [
+    {
+      "clause_id": "CL-01",
+      "policy_id": "POL-A101",
+      "heading": "Cover: windstorm and cyclone",
+      "text": "The insurer covers physical loss or damage to the insured building caused by windstorm or cyclone, subject to the policy limit and deductible.",
+      "kind": "coverage",
+      "perils": [
+        "cyclone",
+        "windstorm"
+      ],
+      "source": "POL-A101 Wording v2, Section 3.1",
+      "is_demo_policy_data": true
+    },
+    {
+      "clause_id": "CL-02",
+      "policy_id": "POL-A101",
+      "heading": "Cover: fire",
+      "text": "The insurer covers loss or damage by fire, lightning and explosion to the insured property.",
+      "kind": "coverage",
+      "perils": [
+        "fire"
+      ],
+      "source": "POL-A101 Wording v2, Section 3.2",
+      "is_demo_policy_data": true
+    },
+    {
+      "clause_id": "CL-03",
+      "policy_id": "POL-A101",
+      "heading": "Exclusion: flood without flood extension",
+      "text": "Loss caused by flood, river overflow or inundation is excluded unless the flood extension has been purchased.",
+      "kind": "exclusion",
+      "perils": [
+        "flood"
+      ],
+      "source": "POL-A101 Wording v2, Section 5.4",
+      "is_demo_policy_data": true
+    },
+    {
+      "clause_id": "CL-04",
+      "policy_id": "POL-A101",
+      "heading": "Endorsement: cyclone deductible CE-2",
+      "text": "Where endorsement CE-2 applies, a separate percentage deductible of the sum insured may apply to windstorm and cyclone claims.",
+      "kind": "endorsement",
+      "perils": [
+        "cyclone",
+        "windstorm"
+      ],
+      "source": "POL-A101 Endorsement CE-2",
+      "is_demo_policy_data": true
+    },
+    {
+      "clause_id": "CL-05",
+      "policy_id": "POL-A101",
+      "heading": "Condition: prompt notice",
+      "text": "The insured must notify the insurer of a loss within 7 days of becoming aware of it.",
+      "kind": "condition",
+      "perils": [
+        "cyclone",
+        "flood",
+        "fire",
+        "windstorm"
+      ],
+      "source": "POL-A101 Wording v2, Section 8.1",
+      "is_demo_policy_data": true
+    },
+    {
+      "clause_id": "CL-06",
+      "policy_id": "POL-A103",
+      "heading": "Exclusion: unoccupancy",
+      "text": "Loss occurring while the premises have been unoccupied for more than 30 consecutive days is excluded.",
+      "kind": "exclusion",
+      "perils": [
+        "fire",
+        "theft"
+      ],
+      "source": "POL-A103 Wording v1, Section 6.2",
+      "is_demo_policy_data": true
+    },
+    {
+      "clause_id": "CL-07",
+      "policy_id": "POL-A104",
+      "heading": "Cover: flood add-on FL-1",
+      "text": "Where add-on FL-1 is held, loss from flood to the insured vehicle is covered subject to the sum insured.",
+      "kind": "endorsement",
+      "perils": [
+        "flood"
+      ],
+      "source": "POL-A104 Add-on FL-1",
+      "is_demo_policy_data": true
+    },
+    {
+      "clause_id": "CL-08",
+      "policy_id": "POL-A104",
+      "heading": "Exclusion: driving under influence",
+      "text": "Loss arising while the insured driver is under the influence of alcohol or drugs is excluded.",
+      "kind": "exclusion",
+      "perils": [
+        "theft",
+        "flood",
+        "fire"
+      ],
+      "source": "POL-A104 Wording v3, Section 7.3",
+      "is_demo_policy_data": true
+    },
+    {
+      "clause_id": "CL-09",
+      "policy_id": "POL-A110",
+      "heading": "Sub-limit: named storm",
+      "text": "Losses from a named storm are payable up to the named storm sub-limit of INR 40,00,000 in aggregate per period of insurance.",
+      "kind": "endorsement",
+      "perils": [
+        "cyclone"
+      ],
+      "source": "POL-A110 Endorsement NS-40",
+      "is_demo_policy_data": true
+    },
+    {
+      "clause_id": "CL-10",
+      "policy_id": "ALL",
+      "heading": "Procedure: proof of loss",
+      "text": "Claims require a completed claim form and proof of the loss amount, such as an invoice or repair estimate. Incomplete claims may be held pending these documents.",
+      "kind": "procedure",
+      "perils": [
+        "cyclone",
+        "flood",
+        "fire",
+        "theft",
+        "motor",
+        "property_damage"
+      ],
+      "source": "ClaimWise Claims Procedure, Step 2",
+      "is_demo_policy_data": true
+    }
+  ],
+  "assumptions": {
+    "assumption_set": "Scenario file demo assumptions (illustrative)",
+    "claim_rate_per_exposed_policy": 0.12,
+    "average_claim_cost_inr": 150000,
+    "adjusters_available": 12,
+    "claims_handled_per_adjuster_per_day": 4,
+    "planning_horizon_days": 14,
+    "escalation_thresholds": {
+      "high_priority_reported_amount_inr": 1000000,
+      "missing_docs_count": 2
+    }
+  },
+  "required_documents": {
+    "property_damage": [
+      "claim_form",
+      "repair_estimate",
+      "invoice",
+      "photos"
+    ],
+    "motor": [
+      "claim_form",
+      "vehicle_registration",
+      "repair_estimate",
+      "photos"
+    ],
+    "fire": [
+      "claim_form",
+      "fire_report",
+      "proof_of_ownership",
+      "invoice"
+    ],
+    "theft": [
+      "claim_form",
+      "police_report",
+      "proof_of_ownership"
+    ],
+    "casualty_liability": [
+      "claim_form",
+      "medical_or_liability_documentation"
+    ],
+    "business_interruption": [
+      "claim_form",
+      "income_statement",
+      "proof_of_payment"
+    ],
+    "other": [
+      "claim_form"
+    ]
+  },
+  "required_documents_why": {
+    "claim_form": "Records the insured's account of the loss.",
+    "repair_estimate": "Gives an independent amount to check the reported loss against.",
+    "invoice": "Confirms the amount actually charged for repairs or replacement.",
+    "photos": "Shows the condition of the damaged item.",
+    "vehicle_registration": "Confirms the vehicle details match the policy.",
+    "fire_report": "Confirms the fire and its cause from an official source.",
+    "proof_of_ownership": "Confirms insurable interest in the damaged item.",
+    "police_report": "Confirms the theft from an official source.",
+    "medical_or_liability_documentation": "Supports the injury or third-party claim.",
+    "income_statement": "Supports the business interruption loss amount.",
+    "proof_of_payment": "Confirms costs the business actually paid."
+  },
+  "notice": "All records are fictional demo data. Hazard alerts are simulated and must not be represented as official forecasts."
+}

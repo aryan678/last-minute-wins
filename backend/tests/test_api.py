@@ -98,7 +98,7 @@ def test_policy_limit_exceeded_is_flagged():
 
 def test_scenario_estimate_matches_reported_amount():
     checks = client.post("/api/claims/CLM-2001/analyze").json()["money_checks"]["checks"]
-    total = next(c for c in checks if c["check"] == "document_total")
+    total = next(c for c in checks if c["check"] == "document_total" and c["evidence_source"] == "DOC-001")
     assert total["status"] == "match"
     assert total["difference_inr"] == 0
 
@@ -106,7 +106,7 @@ def test_scenario_estimate_matches_reported_amount():
 def test_contradictory_estimate_total_is_discrepancy():
     store.documents["DOC-001"]["extracted_fields"]["total"] = 412500  # estimate 67,500 below the claim
     checks = client.post("/api/claims/CLM-2001/analyze").json()["money_checks"]["checks"]
-    total = next(c for c in checks if c["check"] == "document_total")
+    total = next(c for c in checks if c["check"] == "document_total" and c["evidence_source"] == "DOC-001")
     assert total["status"] == "discrepancy"
     assert total["difference_inr"] == 67500
 

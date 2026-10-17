@@ -1501,15 +1501,16 @@
     {
       "document_id": "DOC-003",
       "claim_id": "CLM-2003",
-      "file_name": "repair_estimate_2003.pdf",
+      "file_name": "repair_estimate_2003_MOCK.pdf",
       "document_type": "repair_estimate",
       "uploaded_at": "2026-10-18T09:00:00+05:30",
       "processing_status": "extracted",
-      "extraction_source": "demo_seed",
+      "extraction_source": "demo_mock",
       "extracted_fields": {
         "document_date": "2026-10-18",
         "currency": "INR",
-        "total": null
+        "total": 320000,
+        "reference": "EST-2003"
       },
       "extraction_confidence": null,
       "review_status": "unreviewed",
@@ -1540,6 +1541,123 @@
       "extraction_confidence": null,
       "review_status": "unreviewed",
       "storage": "demo_seed"
+    },
+    {
+      "document_id": "DOC-006",
+      "claim_id": "CLM-2001",
+      "file_name": "claim_form_2001_MOCK.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-18T09:30:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_mock",
+      "extracted_fields": {
+        "claimant_name": "Asha Rao",
+        "policy_number": "POL-A101",
+        "incident_date": "2026-10-18",
+        "claimed_amount": 480000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_mock"
+    },
+    {
+      "document_id": "DOC-007",
+      "claim_id": "CLM-2002",
+      "file_name": "claim_form_2002_MOCK.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-18T09:30:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_mock",
+      "extracted_fields": {
+        "claimant_name": "Vikram Menon",
+        "policy_number": "POL-A102",
+        "incident_date": "2026-10-18",
+        "claimed_amount": 175000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_mock"
+    },
+    {
+      "document_id": "DOC-008",
+      "claim_id": "CLM-2003",
+      "file_name": "claim_form_2003_MOCK.pdf",
+      "document_type": "claim_form",
+      "uploaded_at": "2026-10-18T09:30:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_mock",
+      "extracted_fields": {
+        "claimant_name": "Priya Nair",
+        "policy_number": "POL-A103",
+        "incident_date": "2026-10-18",
+        "claimed_amount": 320000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_mock"
+    },
+    {
+      "document_id": "DOC-009",
+      "claim_id": "CLM-2001",
+      "file_name": "final_invoice_2001_MOCK.pdf",
+      "document_type": "invoice",
+      "uploaded_at": "2026-10-18T09:30:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_mock",
+      "extracted_fields": {
+        "issuer": "Coastal Build Works (MOCK)",
+        "document_date": "2026-10-18",
+        "reference": "INV-2001",
+        "currency": "INR",
+        "subtotal": 392000,
+        "tax": 20000,
+        "total": 412000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_mock"
+    },
+    {
+      "document_id": "DOC-010",
+      "claim_id": "CLM-2002",
+      "file_name": "invoice_2002_MOCK.pdf",
+      "document_type": "invoice",
+      "uploaded_at": "2026-10-18T09:30:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_mock",
+      "extracted_fields": {
+        "issuer": "City Auto Garage (MOCK)",
+        "document_date": "2026-10-18",
+        "reference": "INV-2002",
+        "currency": "INR",
+        "subtotal": 175000,
+        "tax": 0,
+        "total": 175000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_mock"
+    },
+    {
+      "document_id": "DOC-011",
+      "claim_id": "CLM-2003",
+      "file_name": "invoice_2003_MOCK.pdf",
+      "document_type": "invoice",
+      "uploaded_at": "2026-10-18T09:30:00+05:30",
+      "processing_status": "extracted",
+      "extraction_source": "demo_mock",
+      "extracted_fields": {
+        "issuer": "Shop Electrical Works (MOCK)",
+        "document_date": "2026-10-18",
+        "reference": "INV-2003",
+        "currency": "INR",
+        "subtotal": 300000,
+        "tax": 0,
+        "total": 320000
+      },
+      "extraction_confidence": null,
+      "review_status": "unreviewed",
+      "storage": "demo_mock"
     }
   ],
   "clauses": [

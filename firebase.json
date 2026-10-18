@@ -1,0 +1,13 @@
+{
+  "apphosting": {
+    "backendId": "claimwise-frontend",
+    "rootDir": "frontend",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "functions"
+    ]
+  }
+}

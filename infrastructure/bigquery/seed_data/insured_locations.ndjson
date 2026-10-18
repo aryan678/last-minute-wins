@@ -1,0 +1,21 @@
+{"location_id":"LOC-A101-1","policy_id":"POL-A101","label":"Demo Zone A property","lat":19.1,"lon":72.85,"tiv_inr":5000000}
+{"location_id":"LOC-A102-1","policy_id":"POL-A102","label":"Demo Zone B vehicle","lat":19.12,"lon":72.88,"tiv_inr":900000}
+{"location_id":"LOC-A103-1","policy_id":"POL-A103","label":"Demo Zone C property","lat":19.16,"lon":72.91,"tiv_inr":3000000}
+{"location_id":"LOC-A104-1","policy_id":"POL-A104","label":"Parking Garage","lat":17.79009,"lon":82.7326,"tiv_inr":800000}
+{"location_id":"LOC-A105-1","policy_id":"POL-A105","label":"Processing Plant","lat":17.57387,"lon":83.22435,"tiv_inr":2500000}
+{"location_id":"LOC-A106-1","policy_id":"POL-A106","label":"Cold Storage 2","lat":18.24054,"lon":82.40162,"tiv_inr":3500000}
+{"location_id":"LOC-A107-1","policy_id":"POL-A107","label":"Lake View Home","lat":19.14144,"lon":81.8815,"tiv_inr":1800000}
+{"location_id":"LOC-A108-1","policy_id":"POL-A108","label":"Residential Car Park","lat":17.98829,"lon":83.12978,"tiv_inr":650000}
+{"location_id":"LOC-A109-1","policy_id":"POL-A109","label":"Pharmacy Outlet 3","lat":17.64595,"lon":83.11087,"tiv_inr":1200000}
+{"location_id":"LOC-A110-1","policy_id":"POL-A110","label":"Hotel Wing A","lat":17.5018,"lon":83.16761,"tiv_inr":3500000}
+{"location_id":"LOC-A110-2","policy_id":"POL-A110","label":"Hotel Wing B","lat":17.38468,"lon":83.25272,"tiv_inr":2500000}
+{"location_id":"LOC-A111-1","policy_id":"POL-A111","label":"Townhouse 7","lat":17.84414,"lon":83.06358,"tiv_inr":2200000}
+{"location_id":"LOC-A112-1","policy_id":"POL-A112","label":"Machine Shop 4","lat":17.06937,"lon":82.96902,"tiv_inr":3000000}
+{"location_id":"LOC-A113-1","policy_id":"POL-A113","label":"Showroom Yard","lat":17.95225,"lon":82.87445,"tiv_inr":1100000}
+{"location_id":"LOC-A114-1","policy_id":"POL-A114","label":"Packaging Factory","lat":17.26757,"lon":83.24326,"tiv_inr":2000000}
+{"location_id":"LOC-A115-1","policy_id":"POL-A115","label":"Cottage 3","lat":17.79009,"lon":83.20543,"tiv_inr":1500000}
+{"location_id":"LOC-A116-1","policy_id":"POL-A116","label":"Seaside Bakery","lat":17.60991,"lon":83.14869,"tiv_inr":500000}
+{"location_id":"LOC-A117-1","policy_id":"POL-A117","label":"Cement Depot","lat":16.88919,"lon":82.35433,"tiv_inr":4500000}
+{"location_id":"LOC-A118-1","policy_id":"POL-A118","label":"Creek Bungalow","lat":17.65495,"lon":82.77988,"tiv_inr":2700000}
+{"location_id":"LOC-A119-1","policy_id":"POL-A119","label":"Logistics Yard","lat":17.33964,"lon":83.0163,"tiv_inr":900000}
+{"location_id":"LOC-A120-1","policy_id":"POL-A120","label":"Data Centre Annex","lat":17.73604,"lon":83.03521,"tiv_inr":5000000}

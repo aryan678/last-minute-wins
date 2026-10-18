@@ -13,10 +13,10 @@ distances AS (
     l.policy_id,
     l.tiv_inr,
     -- Haversine distance in km
-    2 * 6371 * ASIN(SQRT(
-      POW(SIN(RADIANS(l.lat - ev.lat) / 2), 2)
-      + COS(RADIANS(ev.lat)) * COS(RADIANS(l.lat)) * POW(SIN(RADIANS(l.lon - ev.lon) / 2), 2)
-    )) AS distance_km,
+    ST_DISTANCE(
+      ST_GEOGPOINT(l.lon, l.lat),
+      ST_GEOGPOINT(ev.lon, ev.lat)
+    ) / 1000 AS distance_km,
     ev.radius_km
   FROM `PROJECT.claimwise.insured_locations` AS l
   CROSS JOIN ev

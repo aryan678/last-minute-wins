@@ -1,10 +1,10 @@
--- ClaimWise AI BigQuery schema. Replace PROJECT and DATASET with your values.
--- Synthetic demo data only. Create the dataset in the same region as Cloud Run (for example asia-south1).
+-- ClaimWise AI BigQuery schema. Replace ai-builder-cup-511918 and DATASET with your values.
+-- Synthetic demo data only. Create the dataset in the same region as Cloud Run (for example us-central1).
 
-CREATE SCHEMA IF NOT EXISTS `PROJECT.claimwise`
-OPTIONS (location = "asia-south1");
+CREATE SCHEMA IF NOT EXISTS `ai-builder-cup-511918.claimwise`
+OPTIONS (location = "us-central1");
 
-CREATE OR REPLACE TABLE `PROJECT.claimwise.alerts` (
+CREATE OR REPLACE TABLE `ai-builder-cup-511918.claimwise.alerts` (
   event_id STRING NOT NULL,
   hazard_type STRING,
   name STRING,
@@ -20,7 +20,7 @@ CREATE OR REPLACE TABLE `PROJECT.claimwise.alerts` (
   is_simulated BOOL
 );
 
-CREATE OR REPLACE TABLE `PROJECT.claimwise.policies` (
+CREATE OR REPLACE TABLE `ai-builder-cup-511918.claimwise.policies` (
   policy_id STRING NOT NULL,
   policy_type STRING,
   insured_item STRING,
@@ -31,7 +31,7 @@ CREATE OR REPLACE TABLE `PROJECT.claimwise.policies` (
   covered_perils ARRAY<STRING>
 );
 
-CREATE OR REPLACE TABLE `PROJECT.claimwise.insured_locations` (
+CREATE OR REPLACE TABLE `ai-builder-cup-511918.claimwise.insured_locations` (
   location_id STRING NOT NULL,
   policy_id STRING NOT NULL,
   label STRING,
@@ -40,7 +40,7 @@ CREATE OR REPLACE TABLE `PROJECT.claimwise.insured_locations` (
   tiv_inr NUMERIC
 );
 
-CREATE OR REPLACE TABLE `PROJECT.claimwise.claims` (
+CREATE OR REPLACE TABLE `ai-builder-cup-511918.claimwise.claims` (
   claim_id STRING NOT NULL,
   policy_id STRING NOT NULL,
   claim_type STRING,
@@ -54,7 +54,7 @@ CREATE OR REPLACE TABLE `PROJECT.claimwise.claims` (
   priority STRING
 );
 
-CREATE OR REPLACE TABLE `PROJECT.claimwise.documents` (
+CREATE OR REPLACE TABLE `ai-builder-cup-511918.claimwise.documents` (
   document_id STRING NOT NULL,
   claim_id STRING NOT NULL,
   document_type STRING,
